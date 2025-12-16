@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mini Todo (jQuery vs JS)</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<h1 class="h1">Mini Todo</h1>
+
+			<section class="card">
+				<form id="todoForm" class="row">
+					<input
+						id="todoInput"
+						class="input"
+						placeholder="Например: купить молоко"
+						autocomplete="off"
+					/>
+					<button class="btn" type="submit">Добавить</button>
+					<button class="btn btn--ghost" id="btnClear" type="button">
+						Очистить
+					</button>
+				</form>
+
+				<div class="row row--space">
+					<div class="pill">Всего: <b id="countAll">0</b></div>
+					<div class="pill">Выполнено: <b id="countDone">0</b></div>
+
+					<input
+						id="searchInput"
+						class="input input--small"
+						placeholder="Поиск..."
+					/>
+					<button class="btn btn--ghost" id="btnToggleTheme" type="button">
+						Тема
+					</button>
+					<button class="btn btn--ghost" id="btnHelp" type="button">?</button>
+				</div>
+
+				<ul id="todoList" class="list"></ul>
+
+				<div class="row">
+					<button class="btn" id="btnLoad" type="button">
+						Загрузить примеры
+					</button>
+					<span id="status" class="status"></span>
+				</div>
+			</section>
+		</main>
+
+		<!-- Модалка -->
+		<div class="modal" id="modal">
+			<div class="modal__box">
+				<div class="modal__head">
+					<h2 class="h2">Подсказка</h2>
+					<button class="btn btn--ghost" id="btnCloseModal" type="button">
+						Закрыть
+					</button>
+				</div>
+				<p class="text">
+					Тут мы показываем основные приёмы: события, классы, делегирование,
+					вставка в DOM, анимации.
+				</p>
+			</div>
+		</div>
+
+		<!-- ✅ ВКЛЮЧИ ОДИН ИЗ ВАРИАНТОВ -->
+
+		<!-- Вариант 1: jQuery -->
+		<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="app-jquery.js"></script> -->
+
+		<!-- Вариант 2: Чистый JS -->
+		<script src="app-js.js"></script>
+	</body>
+</html>
